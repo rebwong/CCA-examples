@@ -1,7 +1,6 @@
 const axios = require('axios');
 const params = { headers : {'Authorization': `Bearer ${process.env.CCA_token}`, 'Content-Type': 'application/json'} };
 
-
 exports.main = async (event, callback) => {
   
 // Take the enrolled deal ID
@@ -68,8 +67,7 @@ const emailData = {
                       console.log(emailDir + " at " + emailTime);
 
                       // Format combined message
-                      let message = `Last ${callDir} call at ${callTime}, 
-Last ${emailDir} at ${emailTime}`;
+                      let message = `Last ${callDir} call at ${callTime}, Last ${emailDir} at ${emailTime}`;
               		
               		// Store the outputs for use in other parts of the workflow
                       callback({
